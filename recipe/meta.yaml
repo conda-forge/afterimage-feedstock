@@ -13,8 +13,7 @@ build:
   number: 1001
   skip: True  # [win]
   run_exports:
-    strong:
-      - afterimage
+    - {{ pin_subpackage('afterimage', max_pin='x.x.x') }}
 
 requirements:
   build:
