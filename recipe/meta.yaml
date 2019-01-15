@@ -10,7 +10,7 @@ source:
   sha256: 6e233253f4d1dd22dfce9f9a245cc036d814fc99ba7f6732f4e345de62cfe458
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('afterimage', max_pin='x.x.x') }}
