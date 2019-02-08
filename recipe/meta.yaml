@@ -1,6 +1,6 @@
 {% set name = "afterimage" %}
 {% set version = "1.21" %}
-{% set root_version = "6.16.00"%}
+{% set root_version = "6.16.00" %}
 {% set hash = "c8415df5a0ec1619df5da0a2a36d79a47f1cf5927ee66cb5f045b39bb250c79a" %}
 
 package:
@@ -53,6 +53,7 @@ test:
 
 about:
   home: http://www.afterstep.org/afterimage
+  dev_url: https://github.com/root-project/root/tree/master/graf2d/asimage/src/libAfterImage
   license: LGPL-2.1
   license_family: LGPL
   license_file: LICENSE
@@ -70,3 +71,4 @@ about:
 extra:
   recipe-maintainers:
     - chrisburr
+    - henryiii
