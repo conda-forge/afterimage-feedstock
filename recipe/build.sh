@@ -1,11 +1,8 @@
 #!/bin/bash
 set -e
 
-# Apply ROOT's patches
-patch -p1 -i "${RECIPE_DIR}/root-afterimage.patch"
-
-# Fix header installation (FS#60246)
-patch -p1 -i "${RECIPE_DIR}/header-install.patch"
+mv root-source/graf2d/asimage/src/libAfterImage/{,.??}* .
+rm -r root-source
 
 if [ "$(uname)" == "Linux" ]; then
     configure_args="--x-includes=\"${PREFIX}/include\" --x-libraries=\"${PREFIX}/lib\""
