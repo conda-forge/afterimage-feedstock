@@ -1,13 +1,16 @@
 {% set name = "afterimage" %}
-{% set version = "1.20" %}
+{% set version = "1.21" %}
+{% set root_version = "6.16.00"%}
+{% set hash = "c8415df5a0ec1619df5da0a2a36d79a47f1cf5927ee66cb5f045b39bb250c79a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://downloads.sourceforge.net/project/afterstep/libAfterImage/{{ version }}/libAfterImage-{{ version }}.tar.bz2
-  sha256: 6e233253f4d1dd22dfce9f9a245cc036d814fc99ba7f6732f4e345de62cfe458
+  url: https://github.com/root-project/root/archive/v{{ root_version|replace(".","-") }}.tar.gz
+  sha256: {{ hash }}
+  folder: root-source
 
 build:
   number: 1002
