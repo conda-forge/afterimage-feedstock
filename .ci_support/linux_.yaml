@@ -10,11 +10,15 @@ docker_image:
 - condaforge/linux-anvil-comp7
 freetype:
 - 2.9.1
+librsvg:
+- 2.44.3
 libtiff:
 - 4.0.9
 pin_run_as_build:
   freetype:
     max_pin: x
+  librsvg:
+    max_pin: x.x
   libtiff:
     max_pin: x
   zlib:
