@@ -1,5 +1,5 @@
 {% set name = "afterimage" %}
-{% set version = "1.21" %}
+{% set version = "6-19-01" %}
 {% set root_version = "6.16.00" %}
 {% set hash = "c8415df5a0ec1619df5da0a2a36d79a47f1cf5927ee66cb5f045b39bb250c79a" %}
 
@@ -13,7 +13,7 @@ source:
   folder: root-source
 
 build:
-  number: 1002
+  number: 0
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('afterimage', max_pin='x.x.x') }}
