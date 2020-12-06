@@ -33,6 +33,7 @@ requirements:
     - freetype
     - librsvg
     - libtiff
+    - xorg-xproto
     - xorg-libx11  # [linux]
     - xorg-libxcursor  # [linux]
     - xorg-libxpm  # [linux]

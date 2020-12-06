@@ -7,10 +7,10 @@ Subject: [PATCH] Hackily fix cross-compilation
  configure.in | 5 +----
  1 file changed, 1 insertion(+), 4 deletions(-)
 
-diff --git a/configure.in b/configure.in
+diff --git a/graf2d/asimage/src/libAfterImage/configure.in b/graf2d/asimage/src/libAfterImage/configure.in
 index 2a479be..678e15d 100644
---- a/configure.in
-+++ b/configure.in
+--- a/graf2d/asimage/src/libAfterImage/configure.in
++++ b/graf2d/asimage/src/libAfterImage/configure.in
 @@ -602,10 +602,7 @@ else
  	                   	[have_ttf=yes],AC_MSG_RESULT(no))
  	  	fi;
