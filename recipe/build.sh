@@ -14,6 +14,8 @@ else
     rm Makefile.in.bak
 fi
 
+autoconf
+
 ./configure \
     --prefix="${PREFIX}" \
     --libdir="${PREFIX}/lib" \
