@@ -1,4 +1,6 @@
 #!/bin/bash
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./root-source/graf2d/asimage/src/libAfterImage
 set -e
 
 mv root-source/graf2d/asimage/src/libAfterImage/{,.??}* .
@@ -11,6 +13,8 @@ else
     sed -i.bak 's@soname@install_name@g' Makefile.in
     rm Makefile.in.bak
 fi
+
+autoconf
 
 ./configure \
     --prefix="${PREFIX}" \

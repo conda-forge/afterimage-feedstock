@@ -11,6 +11,8 @@ source:
   url: https://github.com/root-project/root/archive/v{{ root_version|replace(".","-") }}.tar.gz
   sha256: {{ hash }}
   folder: root-source
+  patches:
+    - 0001-Hackily-fix-cross-compilation.patch  # [build_platform != target_platform]
 
 build:
   number: 1003
@@ -20,15 +22,18 @@ build:
 
 requirements:
   build:
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - pkg-config
     - make
+    - autoconf
   host:
     - zlib
     - freetype
     - librsvg
     - libtiff
+    - xorg-xproto
     - xorg-libx11  # [linux]
     - xorg-libxcursor  # [linux]
     - xorg-libxpm  # [linux]
