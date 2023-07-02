@@ -1,11 +1,11 @@
-About afterimage
-================
+About afterimage-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/afterimage-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.afterstep.org/afterimage
 
 Package license: LGPL-2.1
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/afterimage-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generic image manipulation library
 
