@@ -14,6 +14,8 @@ cxx_compiler_version:
 - '15'
 freetype:
 - '2'
+glib:
+- '2'
 librsvg:
 - '2'
 libtiff:
