@@ -29,6 +29,7 @@ requirements:
     - make
     - autoconf
   host:
+    - glib
     - zlib
     - freetype
     - librsvg
