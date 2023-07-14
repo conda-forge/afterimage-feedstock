@@ -33,5 +33,5 @@ autoconf
 # don't run ldconfig
 sed -i -e 's/`uname`/"hack"/g' Makefile
 
-make AR="${AR} clq"
-make AR="${AR} clq" install
+make AR="${AR} cq"
+make AR="${AR} cq" install
