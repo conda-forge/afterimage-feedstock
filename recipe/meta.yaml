@@ -15,7 +15,7 @@ source:
     - 0001-Hackily-fix-cross-compilation.patch  # [build_platform != target_platform]
 
 build:
-  number: 1004
+  number: 1005
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('afterimage', max_pin='x.x.x') }}
