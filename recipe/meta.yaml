@@ -1,22 +1,22 @@
 {% set name = "afterimage" %}
-{% set version = "1.21" %}
+{% set version = "6-37-01" %}
 {% set root_version = "6.16.00" %}
-{% set hash = "c8415df5a0ec1619df5da0a2a36d79a47f1cf5927ee66cb5f045b39bb250c79a" %}
+{% set hash = "a5fcddd0d566d37edb70e72ddd2d4de49bc420a5e511bbd90ebe8dcf7de33912" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/root-project/root/archive/v{{ root_version|replace(".","-") }}.tar.gz
+  url: https://github.com/root-project/root/archive/v{{ root_version|replace(".","-") }}.zip
   sha256: {{ hash }}
   folder: root-source
   patches:
     - 0001-Hackily-fix-cross-compilation.patch  # [build_platform != target_platform]
 
 build:
-  number: 1005
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('afterimage', max_pin='x.x.x') }}
 
@@ -24,6 +24,7 @@ requirements:
   build:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - pkg-config
     - make
